@@ -1,0 +1,448 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85%;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.logo_link {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    height: 100px;
+}
+
+.recettes_accueil {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin-top: 100px;
+}
+
+
+.carte {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  border-color: transparent;
+  height: 364px;
+  width: 380px;
+}
+
+.topSpace {
+  height: 50%;
+  background-color: #C7BEBE;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.bottomSpace {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #E7E7E7;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.titleAndTimer {
+  display: flex;
+}
+
+.title {
+  width: 70%;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.timer_block {
+  display: flex;
+  width: 30%;
+  font-size: 16px;
+  font-weight: bolder;
+  justify-content: end;
+  align-items: center;
+}
+
+.timer {
+  margin-left: 5px;
+}
+
+
+
+
+.ingredientsAndTuto{
+  display: flex;
+  width: 100%;
+  text-overflow: ellipsis;
+  height: 65%;
+}
+
+.ingredients_bloc {
+  width: 50%;
+
+}
+
+.ingredients {
+  font-size: 10px;
+  display: flex;
+}
+
+.ingredient_txt {
+  font-weight: bolder;
+}
+
+.quantity_unit {
+  font-size: 10px;
+}
+
+.tuto {
+  display: block;
+  font-size: 10px;
+  width: 50%;
+  overflow: hidden;
+}
+
+.tuto_description {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  font-size: 10px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.recettes_accueil article img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+/*trieurs à changer*/   
+
+
+
+/* ///  END DECORATION CSS  ///  */
+svg {
+    fill: #ffffff;
+  }
+  .icon_select_mate {
+    position: absolute;
+    top: 20px;
+    right: 2%;
+    font-size: 16px;
+    height: 22px;
+    transition: all 275ms;
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  .icon_select_mate2 {
+    position: absolute;
+    top: 20px;
+    right: 2%;
+    font-size: 16px;
+    height: 22px;
+    transition: all 275ms;
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  .text_colored {
+    color: #E7E7E7;
+    background-color: transparent;
+    border-color: transparent;
+    height: 60px;
+    width: 90%;
+  }
+
+  .text_colored::placeholder {
+    color: #E7E7E7;
+  }
+
+
+  .select_mate {
+    position: relative;
+    float: left;
+    min-height: 60px;
+    color: #ffffff;
+    font-weight: 300;
+    box-shadow: 1px 2px 10px -2px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    transition: all 375ms ease-in-out;
+    margin-right: 10px;
+    padding-inline: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .research_container {
+    width: 100%;
+    height: 70px;
+  }
+
+  .tags_flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .little_array_container {
+    display: none;
+    grid-template-columns: 150px repeat(1, 1fr auto minmax(30%, 1fr));
+  }
+
+
+  #color1 {
+    background-color: #3282F7;
+  }
+
+  #color2 {
+    background-color: #68D9A4;
+  }
+
+  #color3 {
+    background-color: #ED6454;
+  }
+
+  
+  .select_mate select {
+    position: absolute;
+    overflow: hidden;
+    height: 0px;
+    opacity: 0;
+    z-index: -1;
+  }
+  .cont_list_select_mate {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  .cont_select_int {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    overflow: hidden;
+    height: 0px;
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 0px 0px 3px 3px;
+    transition: all 375ms ease-in-out;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-inline: 8px;
+    margin-left: -8px;
+    margin-top: -3px;
+  }
+  .cont_select_int li {
+    position: relative;
+    float: left;
+    width: 96%;
+    list-style-type: none;
+    padding: 10px 2%;
+    margin: 0px;
+    transition: all 275ms ease-in-out;
+    display: block;
+    cursor: pointer;
+  }
+  .cont_select_int li:last-child {
+    border-bottom: 0px;
+  }
+  .cont_select_int li:hover {
+    background-color: #eeeeee;
+  }
+  .cont_select_int .active {
+    background-color: #eeeeee;
+    display: none;
+  }
+  /* etiqueta <p> con la opcion selecionada  */
+  .selecionado_opcion {
+    padding: 20px 2%;
+    width: 96%;
+    display: block;
+    margin: 0px;
+    cursor: pointer;
+  }
+
+
+
+/*filtres*/
+.filtres_flex {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.filtre_grand {
+    display: flex;
+    background-color: #E7E7E7;
+    height: 54px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.text_flex {
+    display: flex;
+    background-color: #E7E7E7;
+    width: 100%;
+    border-color: transparent;
+    border-radius: 4px;
+}
+
+.text {
+    display: flex;
+    background-color: #E7E7E7;
+    border-color: transparent;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 15px;
+    font-family: "DM Sans", sans-serif;
+    color: black;
+}
+
+.text::placeholder {
+  color: #a2a0a0;
+}
+
+.icon_search_flex {
+    display: flex;
+    margin-left: -50px;
+    font-size: 30px;
+    line-height: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.filtres_petits {
+    display: flex;
+    flex-direction: column;
+}
+
+.Tags_Container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 5px;
+}
+
+.Tags_Container_Ingredients {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.Tags_Container_Ustensils {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.Tags_Container_Appareils {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+
+.filtre_petit_1 {
+  display: flex;
+}
+
+
+input:hover {
+  background: transparent;
+  }
+
+
+.ingredient_tag {
+  display: block;
+  color: white;
+}
+
+.ustensil_tag {
+  display: block;
+  color: white;
+}
+
+.appareil_tag {
+  display: block;
+  color: white;
+}
+
+
+.bloc_chosen_ingredient{
+  display: flex;
+  background-color: #3282F7;
+  align-items: center;
+  padding: 15px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.bloc_chosen_ustensil{
+  display: flex;
+  background-color: #ED6454;
+  align-items: center;
+  padding: 15px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.bloc_chosen_appareil{
+  display: flex;
+  background-color:#68D9A4;
+  align-items: center;
+  padding: 15px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#croix_tag{
+  color: white;
+  border: white;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.ingredient {
+  padding-left: 10px;
+}
+
+.appareil {
+  padding-left: 10px;
+}
+
+.ustensil {
+  padding-left: 10px;
+}
+
+.filteredInput:focus {
+  outline: none;
+}
+
+.appareil_carte {
+  display: none;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "p7-2",
+  "version": "1.0.0",
+  "description": "Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Real-Selim-Shady/Les-Petits-Plats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Real-Selim-Shady/Les-Petits-Plats/issues"
+  },
+  "homepage": "https://github.com/Real-Selim-Shady/Les-Petits-Plats#readme",
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "prettier": "^2.7.1"
+  }
+}
