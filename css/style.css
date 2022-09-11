@@ -446,3 +446,8 @@ input:hover {
 .appareil_carte {
   display: none;
 }
+
+.NoRecipeMessage {
+  display: block;
+  font-size: 14px;
+}

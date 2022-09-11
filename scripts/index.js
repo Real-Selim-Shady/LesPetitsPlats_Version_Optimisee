@@ -39,7 +39,6 @@ function getRecipes() {
 function displayRecipes() {
     recettes_accueil.innerHTML = "";
 
-    //essayer de faire fonctionner ça avec une boucle for sur la version pas optimisée
     filteredRecipes.forEach((recipe) => {
 
         const recipeModel = recipeFactory(recipe);
@@ -135,12 +134,14 @@ function filterRecipes()
 
     displayRecipes();
 
+    NoRecipe();
+
 
 }
 
 function afficherIngredients(ingredients)
 {
-    // afficher les ingrédients qui sont dans (ingredients)
+    //affiche les ingredients du tableau de filtre tant que le tag n’est pas déjà existant
     
     const little_ingredients_container = document.getElementById("little_ingredients_container");
     little_ingredients_container.innerHTML = "";
@@ -159,7 +160,7 @@ function afficherIngredients(ingredients)
 
 function afficherUstensils(ustensils)
 {
-    // afficher les ingrédients qui sont dans (ingredients)
+    //affiche les ustensiles du tableau de filtre tant que le tag n’est pas déjà existant
 
     const little_ustensiles_container = document.getElementById("little_ustensiles_container");
     little_ustensiles_container.innerHTML = "";
@@ -176,7 +177,7 @@ function afficherUstensils(ustensils)
 
 function afficherAppareils(appliance)
 {
-    // afficher les ingrédients qui sont dans (ingredients)
+    //affiche les appareils du tableau de filtre tant que le tag n’est pas déjà existant
 
     const little_appareils_container = document.getElementById("little_appareils_container");
     little_appareils_container.innerHTML = "";
@@ -194,6 +195,8 @@ function afficherAppareils(appliance)
 
 function filterBySearch()
 {
+    //la fonction permet de filtrer les recettes à partir de la barre de recherche principale
+    //Sont recherchés les ingrédients, les noms des recettes ainsi que les mots contenus dans les descriptions des recettes
 
     let rechercher = document.getElementById("rechercher").value.toLowerCase();
 
@@ -224,6 +227,7 @@ function filterBySearch()
 function filterByIngredient(filteredRecipes, filteringIngredient) 
 {
 
+    //la fonction permet au filtre ingrédients de filter les recettes par les ingredients 
         
     filteredRecipes = 
 
@@ -246,9 +250,11 @@ function filterByIngredient(filteredRecipes, filteringIngredient)
 
 }
 
-//fonctionne alors que je n'ai pas ajouté les ustensils en invisible... quel est le pb d'appareils alors?
+
 function filterByUstensil(filteredRecipes, filteringUstensil) 
 {
+    
+    //la fonction permet au filtre ustensiles de filter les recettes par les ustensiles 
 
     filteredRecipes = 
 
@@ -270,9 +276,11 @@ function filterByUstensil(filteredRecipes, filteringUstensil)
 
 }
 
-//ajoute les appareils dans la carte mais en invisible?
+
 function filterByAppareil(filteredRecipes, filteringAppareil) 
 {
+    
+    //la fonction permet au filtre appareils de filter les recettes par les appareils 
   
     filteredRecipes = 
 
@@ -294,12 +302,13 @@ function filterByAppareil(filteredRecipes, filteringAppareil)
 
 
 
-// FONCTIONS de côté en attendant la création des tags
+
 
 function onIngredientFilterChange()
 {
+    //la fonction permet de gérer la barre de recherche des filtres spécifiques
     // quand l'utilisateur saisit un filtre (ajoute ou supprime des caractères)
-//let littleIngredientsList = // on filtre littleIngredients par la saisie dans le input
+    //let littleIngredientsList = // on filtre littleIngredients par la saisie dans le input
 
     let recherche_ingredients = document.getElementById("recherche_ingredients").value.toLowerCase();
     let littleIngredientsList = [];
@@ -325,8 +334,9 @@ function onIngredientFilterChange()
 
 function onUstensilFilterChange()
 {
+    //la fonction permet de gérer la barre de recherche des filtres spécifiques
     // quand l'utilisateur saisit un filtre (ajoute ou supprime des caractères)
-//let littleIngredientsList = // on filtre littleIngredients par la saisie dans le input
+    //let littleUstensilsList = // on filtre littleUstensils par la saisie dans le input
 
     let recherche_ustensiles = document.getElementById("recherche_ustensiles").value.toLowerCase();
     let littleUstensilsList = [];
@@ -349,8 +359,9 @@ function onUstensilFilterChange()
 
 function onAppareilFilterChange()
 {
+    //la fonction permet de gérer la barre de recherche des filtres spécifiques
     // quand l'utilisateur saisit un filtre (ajoute ou supprime des caractères)
-//let littleIngredientsList = // on filtre littleIngredients par la saisie dans le input
+    //let littleAppareilsList = // on filtre littleAppareils par la saisie dans le input
 
     let recherche_appareils = document.getElementById("recherche_appareils").value.toLowerCase();
     let littleAppareilsList = [];
@@ -370,8 +381,9 @@ function onAppareilFilterChange()
 
 }
 
-//fonctions servant à faire tourner les fleches pour le moment
+
 function open_select1(){
+    //la fonction permet de gérer l'ouverture des filtres respectifs et leur fermeture
 
     const little_ingredients_container = document.getElementById("little_ingredients_container");
 
@@ -395,6 +407,7 @@ function open_select1(){
 } 
 
 function open_select1_2(){
+    //la fonction permet de gérer l'ouverture des filtres respectifs 
 
     const little_ingredients_container = document.getElementById("little_ingredients_container");
 
@@ -405,7 +418,7 @@ function open_select1_2(){
 } 
 
 function open_select2(){
-
+    //la fonction permet de gérer l'ouverture des filtres respectifs et leur fermeture
     
     const little_appareils_container = document.getElementById("little_appareils_container");
 
@@ -423,7 +436,7 @@ function open_select2(){
 }
 
 function open_select2_2(){
-
+    //la fonction permet de gérer l'ouverture des filtres respectifs 
     
     const little_appareils_container = document.getElementById("little_appareils_container");
 
@@ -434,7 +447,7 @@ function open_select2_2(){
 }
 
 function open_select3(){
-
+    //la fonction permet de gérer l'ouverture des filtres respectifs et leur fermeture
 
 
     const little_ustensiles_container = document.getElementById("little_ustensiles_container");
@@ -454,7 +467,7 @@ function open_select3(){
 }
 
 function open_select3_2(){
-
+    //la fonction permet de gérer l'ouverture des filtres respectifs 
 
 
     const little_ustensiles_container = document.getElementById("little_ustensiles_container");
@@ -469,6 +482,7 @@ function open_select3_2(){
 
 function addIngredientTag(ingredient)
 { 
+    //la fonction permet d'afficher des tags à la liste des tags mais aussi de les en retirer de la liste
 
     selected_ingredients.push(ingredient);
 
@@ -506,9 +520,8 @@ function addIngredientTag(ingredient)
 
 function addUstensilTag(ustensil)
 {
-    // l'utilisateur a cliqué sur un ustensil dans la liste.
-    // on ajoute le tag de cet ustensil à la liste des tags (éventuellement déjà existants)
-    // on ferme la liste des ustensils
+    //la fonction permet d'afficher des tags à la liste des tags mais aussi de les en retirer de la liste
+
 
     selected_ustensils.push(ustensil);
 
@@ -545,6 +558,7 @@ function addUstensilTag(ustensil)
 
 function addAppareilTag(appliance)
 {
+    //la fonction permet d'afficher des tags à la liste des tags mais aussi de les en retirer de la liste
 
     selected_appareils.push(appliance);
 
@@ -579,6 +593,19 @@ function addAppareilTag(appliance)
     });
 
     filterRecipes();
+}
+
+
+function NoRecipe() {
+
+    let NoRecipeMessage = document.createElement("div");
+    NoRecipeMessage.className = "NoRecipeMessage";
+    NoRecipeMessage.textContent = "Aucune recette ne correspond à votre recherche... Vous pouvez chercher « tarte aux pommes », « poisson », etc";
+
+    if(filteredRecipes.length === 0) {
+        recettes_accueil.appendChild(NoRecipeMessage);
+    }
+
 }
 
 

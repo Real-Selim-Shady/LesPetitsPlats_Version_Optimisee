@@ -122,7 +122,7 @@ function recipeFactory(recipe) {
 }
 
 function getAppareilCard (appliance) {
-
+    //la fonction permet de sélectionner les tags
     const appareil1 = document.createElement("div");
     appareil1.className = "appareil";
     appareil1.textContent = appliance;
@@ -137,7 +137,7 @@ function getAppareilCard (appliance) {
 
 
 function getUstensilCard (ustensil) {
-
+    //la fonction permet de sélectionner les tags
     const ustensil1 = document.createElement("div");
     ustensil1.className = "ustensil";
     ustensil1.textContent = ustensil;
@@ -152,7 +152,7 @@ function getUstensilCard (ustensil) {
 
 
 function getIngredientCard(ingredient) {
-    
+    //la fonction permet de sélectionner les tags    
     const ingredient1 = document.createElement("div");
     ingredient1.className = "ingredient";
     ingredient1.textContent = ingredient;
